@@ -1,0 +1,86 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Home {% endblock title %}
+{% block home_active %}current{% endblock home_active %}
+
+{% block content %}
+			<!-- Main Slider Two -->
+		<section class="main-slider-two">
+			<div class="main-slider-carousel owl-carousel owl-theme">
+
+				<div class="slide" style="background-image:url({% static 'app/images/main-slider/image-2.jpg' %})">
+					<div class="section-pattern-layer"></div>
+					<div class="pattern-layer" style="background-image:url({% static 'app/images/main-slider/pattern-2.png' %})"></div>
+					<div class="pattern-layer-two" style="background-image:url({% static 'app/images/main-slider/pattern-8.png' %})"></div>
+					<div class="pattern-layer-three" style="background-image:url({% static 'app/images/main-slider/pattern-3.png' %})">
+					</div>
+					<div class="pattern-layer-four" style="background-image:url({% static 'app/images/main-slider/pattern-4.png' %})">
+					</div>
+					<div class="auto-container">
+						<!-- Content Box -->
+						<div class="content-box">
+
+							<h1>Smart Web Develpment <br> And Design Agecny</h1>
+							<div class="link-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-two"><span class="txt">Read
+										More</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide" style="background-image:url({% static 'app/images/main-slider/image-2.jpg' %})">
+					<div class="section-pattern-layer"></div>
+					<div class="pattern-layer" style="background-image:url({% static 'app/images/main-slider/pattern-2.png' %})"></div>
+					<div class="pattern-layer-two" style="background-image:url({% static 'app/images/main-slider/pattern-8.png' %})"></div>
+					<div class="pattern-layer-three" style="background-image:url({% static 'app/images/main-slider/pattern-3.png' %})">
+					</div>
+					<div class="pattern-layer-four" style="background-image:url({% static 'app/images/main-slider/pattern-4.png' %})">
+					</div>
+					<div class="auto-container">
+						<!-- Content Box -->
+						<div class="content-box">
+
+							<h1>Smart Web Develpment <br> And Design Agecny</h1>
+							<div class="link-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-two"><span class="txt">Read
+										More</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide" style="background-image:url({% static 'app/images/main-slider/image-2.jpg' %})">
+					<div class="section-pattern-layer"></div>
+					<div class="pattern-layer" style="background-image:url({% static 'app/images/main-slider/pattern-2.png' %})"></div>
+					<div class="pattern-layer-two" style="background-image:url({% static 'app/images/main-slider/pattern-8.png' %})"></div>
+					<div class="pattern-layer-three" style="background-image:url({% static 'app/images/main-slider/pattern-3.png' %})">
+					</div>
+					<div class="pattern-layer-four" style="background-image:url({% static 'app/images/main-slider/pattern-4.png' %})">
+					</div>
+					<div class="auto-container">
+						<!-- Content Box -->
+						<div class="content-box">
+
+							<h1>Smart Web Develpment <br> And Design Agecny</h1>
+							<div class="link-box">
+								<a href="{% url 'about' %}" class="theme-btn btn-style-two"><span class="txt">Read
+										More</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+		<!-- End Main Slider Two -->
+
+	
+
+	
+
+		<!-- End News Section Three -->
+{% endblock content %}

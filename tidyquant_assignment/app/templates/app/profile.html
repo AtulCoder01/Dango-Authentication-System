@@ -1,0 +1,83 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Profile {% endblock title %}
+{% block profile_active %}current{% endblock profile_active %}
+
+{% block content %}
+			<!--Page Title-->
+		<section class="page-title" style="background-image:url({% static 'app/images/background/5.jpg' %})">
+			<div class="pattern-layer" style="background-image:url({% static 'app/images/background/pattern-21.png' %})"></div>
+			<div class="pattern-layer-two" style="background-image:url({% static 'app/images/icons/pattern-1.png' %})"></div>
+			<div class="auto-container">
+				<div class="inner-container clearfix">
+					<div class="pull-left">
+						<h2 class="text-primary">Profile</h2>
+
+					</div>
+					<div class="pull-right">
+						<ul class="bread-crumb clearfix">
+							<li><a href="{% url 'home' %}">Home</a></li>
+							<li>Profile</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Page Title-->
+
+		<!-- Contact Info Section -->
+		<section class="contact-info-section">
+			<div class="auto-container">
+				<div class="sec-title centered">
+					<h2><span>Welcome </span> {{ request.user }}!</h2>
+					<div class="text">Beyond more stoic this along goodness this this wow ipsum sed mante far impressive
+						<br> manifest farcrud opened inside.</div>
+						
+				</div>
+				<div class="row clearfix">
+
+					<!-- Info Column -->
+
+
+
+					<div class="info-column col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-column">
+
+							<ul class="list-style-three">
+								<li><span class="icon flaticon-maps-and-flags"></span><b>Last Login:</b> {{ last_login|default:"First Time Login"}}</li> 
+								<li><span class="icon flaticon-maps-and-flags"></span><b>Your IP:</b> {{ request.META.REMOTE_ADDR }}</li>
+								{% if mac|length > 10 %}
+									<li><span class="icon flaticon-maps-and-flags"></span><b>Mac Address:</b> {{ mac }}</li>
+								{% endif %}
+								<li><span class="icon flaticon-maps-and-flags"></span><b>User Agent:</b> {{ request.META.HTTP_USER_AGENT }}</li>
+								
+							</ul>
+							<!-- Social Box -->
+							<div class="social-box">
+								<span>Contact on Social Media :</span>
+								<a href="#" class="fa fa-facebook-f"></a>
+								<a href="#" class="fa fa-twitter"></a>
+								<a href="#" class="fa fa-pinterest-p"></a>
+								<a href="#" class="fa fa-dribbble"></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Contact Info Section -->
+
+		<!-- Contact Map Section -->
+
+		<!-- End Contact Map Section -->
+
+		<!-- Contact Form Section -->
+		<section class="contact-form-section">
+
+		</section>
+		<!-- End Faq's Form Section -->
+{% endblock content %}

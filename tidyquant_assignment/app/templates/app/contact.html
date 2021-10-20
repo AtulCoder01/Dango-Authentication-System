@@ -1,0 +1,130 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Contact Us {% endblock title %}
+{% block contact_active %}current{% endblock contact_active %}
+
+{% block content %}
+			<!--Page Title-->
+		<section class="page-title" style="background-image:url({% static 'app/images/background/5.jpg' %})">
+			<div class="pattern-layer" style="background-image:url({% static 'app/images/background/pattern-21.png' %})"></div>
+			<div class="pattern-layer-two" style="background-image:url({% static 'app/images/icons/pattern-1.png' %})"></div>
+			<div class="auto-container">
+				<div class="inner-container clearfix">
+					<div class="pull-left">
+						<h2>Contact Us</h2>
+
+					</div>
+					<div class="pull-right">
+						<ul class="bread-crumb clearfix">
+							<li><a href="{% url 'home' %}">Home</a></li>
+							<li>Contact Us</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--End Page Title-->
+
+		<!-- Contact Info Section -->
+		<section class="contact-info-section">
+			<div class="auto-container">
+				<div class="sec-title centered">
+					<h2><span>Contact</span> us now</h2>
+					<div class="text">Beyond more stoic this along goodness this this wow ipsum sed mante far impressive
+						<br> manifest farcrud opened inside.</div>
+				</div>
+				<div class="row clearfix">
+
+					<!-- Info Column -->
+
+
+					<!-- Info Column -->
+					<div class="info-column col-lg-6 col-md-12 col-sm-12">
+						<div class="auto-container">
+							<!-- Sec Title -->
+
+							<div class="inner-container">
+
+								<!-- Contact Form -->
+								<div class="contact-form">
+									<form method="post" action="" id="constact-form">
+										{% csrf_token %}
+										<div class="row clearfix">
+
+											<div class="form-group col-lg-6 col-md-6 col-sm-12">
+												<input type="text" name="name" value="" placeholder="Your Name"
+													required>
+											</div>
+
+											<div class="form-group col-lg-6 col-md-6 col-sm-12">
+												<input type="email" name="email" value="" placeholder="Your Email"
+													required>
+											</div>
+
+											<div class="form-group col-lg-6 col-md-6 col-sm-12">
+												<input type="text" name="subject" value="" placeholder="Subject"
+													required>
+											</div>
+
+											<div class="form-group col-lg-6 col-md-6 col-sm-12">
+												<input type="text" name="phone" value="" placeholder="Phone" required>
+											</div>
+
+											<div class="form-group col-lg-12 col-md-12 col-sm-12">
+												<textarea name="message" placeholder="Your Question"></textarea>
+											</div>
+
+											<div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+												<button type="submit" class="theme-btn btn-style-three"><span
+														class="txt">Contact us</span></button>
+											</div>
+
+										</div>
+									</form>
+								</div>
+								<!-- End Contact Form -->
+
+							</div>
+						</div>
+					</div>
+
+					<div class="info-column col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-column">
+
+							<ul class="list-style-three">
+								<li><span class="icon flaticon-maps-and-flags"></span>Oliver Street East Victoria 2006
+									UK</li>
+								<li><span class="icon flaticon-call-2"></span><a href="tel:666-999-0000">666 999
+										0000</a></li>
+								<li><span class="icon flaticon-email-2"></span><a
+										href="mailto:needhelp@Moran.com">needhelp@website.com</a></li>
+							</ul>
+							<!-- Social Box -->
+							<div class="social-box">
+								<span>Contact on Social Media :</span>
+								<a href="#" class="fa fa-facebook-f"></a>
+								<a href="#" class="fa fa-twitter"></a>
+								<a href="#" class="fa fa-pinterest-p"></a>
+								<a href="#" class="fa fa-dribbble"></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Contact Info Section -->
+
+		<!-- Contact Map Section -->
+
+		<!-- End Contact Map Section -->
+
+		<!-- Contact Form Section -->
+		<section class="contact-form-section">
+
+		</section>
+		<!-- End Faq's Form Section -->
+{% endblock content %}
